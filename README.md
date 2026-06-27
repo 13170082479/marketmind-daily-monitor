@@ -42,7 +42,7 @@ The workflow runs in UTC and maps to Beijing time like this:
 - 09:00 CST = `0 1 * * *`
 - 15:00 CST = `0 7 * * *`
 - 21:30 CST = `30 13 * * *`
-- 22:30 CST = `30 14 * * *`
+- 22:00 CST = `0 14 * * *`
 
 ## Cloud entry script
 
