@@ -44,5 +44,13 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -e .
 
+      - name: Runtime check
+        working-directory: ${{ github.workspace }}
+        run: |
+          pwd
+          python --version
+          python -c "import marketmind_api; print(marketmind_api.__file__)"
+
       - name: Send market brief
-        run: python scripts/send_market_brief.py
+        working-directory: ${{ github.workspace }}
+        run: python -m marketmind_api.scripts.run_daily_market_monitor
