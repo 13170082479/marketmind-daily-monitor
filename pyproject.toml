@@ -1,0 +1,18 @@
+﻿[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marketmind-daily-monitor"
+version = "0.1.0"
+description = "Daily market monitor and Feishu push tool"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic-settings>=2.6",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
